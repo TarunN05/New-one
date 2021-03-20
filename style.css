@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+body{
+    background-color: hsl(231, 7%, 65%);
+}
+
+/* ----------------------------------[Navbar]-------------------------------------------- */
+.navbar{
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.nav-links{
+    display: flex;
+}
+.nav-links li a{
+    padding: .5rem 1rem ;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: rgb(247, 241, 241);
+}
+.btn{
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    height: 3px;
+    width: 20px;
+    background-color: black;
+    margin: 4px;
+}
+
+/* --------------------------------[Container]-------------------------------------------- */
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Barlow;
+    margin-top: 5rem;
+    overflow: hidden;
+    /* background-color: #fff; */
+    background-color: hsl(231, 7%, 65%);
+   
+}
+.rc{
+    position: relative;
+    left: 253px;
+    max-width: 100%;
+}
+.rc span{
+    background-color: black;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: .5rem 1rem;
+}
+.rc h5{
+    color:  hsl(231, 7%, 65%);
+    letter-spacing: 5px;
+}
+.rc h1{
+    font-weight:bold;
+    font-size: 3rem;
+    margin: .5rem 1rem;
+}
+
+.rc p{
+    margin: .5rem 1rem;
+    color:  hsl(231, 7%, 65%);
+}
+
+.button-c{
+   border: none;
+   padding: 1rem 1rem;
+   margin: .5rem;
+   font-weight: bold;
+   border-radius: 10px;
+   cursor: pointer;
+   background: transparent;
+   letter-spacing:3px;
+}
+.color-btn{
+    background-color: crimson;
+}
+
+
+.container .lc img{
+    position: relative;
+    left: 372px;
+    /* max-width: 50%; */
+}
+
+/* -------------------------------[Media Query]---------------------------------- */
+@media screen and (max-width:728px){
+   
+    .navbar{
+        margin-top: 36px;
+    }
+
+
+    .nav-links{
+        position: absolute;
+        top: 20%;
+        flex-direction: column;
+        align-items: center;
+        background-color:  hsl(230, 11%, 40%);
+        padding: 50px 50px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+        border-radius: 20px;
+        z-index: 100;
+    }
+    .nav-links li {
+         padding: 20px 23px;
+       
+    }
+    .nav-links li a{
+        color: #fff;
+    }
+    
+    .btn{
+        position: absolute;
+        top: 50%;
+        flex-direction: column;
+        align-items: center;
+        padding: 9px 23px;
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+        color: #fff;
+        z-index: 100;
+    }
+
+    .burger{
+        display: block;
+    }
+
+
+
+    /* ----------------------------------------------[Container]--------------------------------- */
+
+ 
+    .container{
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        z-index: 10;
+        top: 107px;
+        left: 5px;
+        margin: 0px 0px;
+        overflow: hidden;
+    }
+    .container .lc{
+        order: -1;
+        margin-bottom: 80px;
+        position: realtive;
+        left: 20px;
+    }
+    .container .rc{
+        position: relative;
+        left: 10px;
+        margin-bottom: 53px;
+    }
+
+    .container .lc img{
+        position: relative;
+        left: 172px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-active{
+    opacity: 1;
+}
